@@ -31,7 +31,7 @@ class HomeworkTest {
     }
     @Test
     fun `Checks if the braces are set wrongly`() {
-        val check = Homework.checkBraces("(Hello))")
+        val check = Homework.checkBraces(")Hello(")
         assertThat(check).isFalse()
     }
 

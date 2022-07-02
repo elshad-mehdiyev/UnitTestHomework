@@ -16,7 +16,7 @@ object Homework {
         var a = 0L
         var b = 1L
         var c = 1L
-        (1..n-2).forEach { i ->
+        (1 until n).forEach { _ ->
             c = a + b
             a = b
             b = c
@@ -29,6 +29,6 @@ object Homework {
      * e.g. "(a * b))" should return false
      */
     fun checkBraces(string: String): Boolean {
-        return string.count { it == '(' } == string.count { it == ')' }
+        return string.count { it == '(' } == string.count { it == ')' } && string.startsWith('(') && string.endsWith(')')
     }
 }
